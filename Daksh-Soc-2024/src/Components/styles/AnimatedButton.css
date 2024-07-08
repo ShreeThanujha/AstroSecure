@@ -1,0 +1,43 @@
+@keyframes vibrate {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25%,
+  75% {
+    transform: translateX(-2px);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+}
+
+
+.AnimatedButton {
+  margin: 35px 35px;
+  height: 40px;
+  width: 90px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #f13004, #fbdc2e);
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.AnimatedButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  animation: vibrate 0.3s ease-in-out;
+}
+
+.AnimatedButton:hover:before {
+  transform: translateX(0);
+}
